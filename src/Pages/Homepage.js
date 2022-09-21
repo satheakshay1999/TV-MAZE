@@ -13,7 +13,7 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <Searchbar />
-      {loading ? (<h1>Loading ...</h1>) : (<div>
+      {loading ? (<h1>Loading ...</h1>) : (<div className="cards">
         {show.map((item) => (
            
            <ListItem

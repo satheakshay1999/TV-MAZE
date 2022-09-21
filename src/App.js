@@ -17,7 +17,7 @@ function App() {
           <Routes>
             <Route  exact path='/'  element={<Homepage/>} ></Route>
             <Route  exact path='/AboutPage'  element={<Aboutpage/>} />
-            <Route path='/Singlepage/:id' element={<Singlepage/>}   />
+            <Route path='/singleshow/:id' element={<Singlepage/>}   />
           </Routes>
         </div>
       </Router>
