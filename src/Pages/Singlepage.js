@@ -1,15 +1,17 @@
 import { useEffect, useContext } from "react";
+import { useParams } from "react-router-dom";
 
 // Context
 import ShowsContext from "../Context/shows/showsContext";
 
-const Singlepage = ({ match }) => {
+const Singlepage = ({ props }) => {
+
   const { getSingleShow, singleShow=[], loading } = useContext(ShowsContext);
 
   useEffect(() => {
-    getSingleShow(match.params.id);
+    getSingleShow(props.match.params.id);
   }, []);
-
+// 
   const removeTags = (text) => {
     if (text === null || text === "") {
       return false;
@@ -22,7 +24,7 @@ const Singlepage = ({ match }) => {
   return (
     <>
     <h1>This is single page  </h1>
-      {loading ? (
+      {/* {loading ? (
         <h1>Loading ...</h1>
       ) : (
         <div className="singleshow">
@@ -66,7 +68,7 @@ const Singlepage = ({ match }) => {
             <p>{singleShow.summary && removeTags(singleShow.summary)}</p>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 };

@@ -1,5 +1,5 @@
 //package imported 
-import {BrowserRouter as Router ,Routes  , Route} from 'react-router-dom';
+import {BrowserRouter as Router ,Routes  , Route , useParams} from 'react-router-dom';
 // imported  Components 
 import Navbar from "./Components/Navbar";
 
