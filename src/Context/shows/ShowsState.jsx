@@ -21,7 +21,7 @@ const ShowsState = (props) => {
     dispatch({ type : SET_LOADING });
 
     const {data} = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`);
-    // console.log(data);
+    console.log(data);
     dispatch({
       type : SEARCH_SHOWS ,
       payload : data
@@ -29,12 +29,12 @@ const ShowsState = (props) => {
   }
   const getSingleShow = async (id) => {
     dispatch({
-      type: SET_LOADING,
+      type: SET_LOADING
     });
     
-    const { data } = await axios.get(`https://api.tvmaze.com/shows/${id}`);
+    const { data } = await axios.get(`https://api.tvmaze.com/singleshow/${id}`);
 
-    console.log(data);
+    // console.log(data);
 
     dispatch({
       type: SET_SINGLE_SHOW,

@@ -4,12 +4,12 @@ import { useParams } from "react-router-dom";
 // Context
 import ShowsContext from "../Context/shows/showsContext";
 
-const Singlepage = ({ props }) => {
+const Singlepage = ({ match }) => {
 
-  const { getSingleShow, singleShow=[], loading } = useContext(ShowsContext);
+  const { getSingleShow=[], singleShow=[], loading } = useContext(ShowsContext);
 
   useEffect(() => {
-    getSingleShow(props.match.params.id);
+    getSingleShow(match.params.id);
   }, []);
 // 
   const removeTags = (text) => {

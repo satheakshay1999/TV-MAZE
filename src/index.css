@@ -62,8 +62,10 @@ text-decoration: none;
   border: 1px solid #171711;
   background-color: #171711;
   color: white;
+  font-size: 15px;
   margin-top: 30px;
-  letter-spacing:7px;
+  letter-spacing:14px;
+  border-radius: 5px;
 }
 /* alert style */
 .alert{
@@ -95,7 +97,7 @@ text-decoration: none;
 .listitem{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  width: 30%;
+  width: 25%;
   border-radius: 5px;
   margin: 9px 15px;
     padding: 16px 27px;
@@ -108,4 +110,38 @@ text-decoration: none;
   margin-bottom: 5px;
   text-decoration: none;
 
+}
+
+/* About page  */
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Source+Sans+Pro:ital,wght@1,200&family=Ubuntu&display=swap');
+.about_container{
+  margin: auto;
+  
+}
+.about_container>h3{
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 10px;
+  font-weight: 200;
+  font-family: 'Macondo', cursive;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+}
+
+.list_items{
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+}
+.about__info {
+  width: 500px;
+  margin: auto;
+}
+.about__info > p {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+.about__info > div > ul > li {
+  margin-left: 2rem;
+  padding: 0.5rem;
 }
