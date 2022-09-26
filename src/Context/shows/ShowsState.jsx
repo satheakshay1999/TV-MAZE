@@ -5,8 +5,8 @@ import ShowsReducer from './showsReducer';
 import {
    SEARCH_SHOWS ,
    SET_LOADING,
-   SET_SINGLE_SHOW ,
-   CLEAR_SINGLE_SHOW
+  //  SET_SINGLE_SHOW ,
+  //  CLEAR_SINGLE_SHOW
 } from '../types';
 
 const ShowsState = (props) => {
@@ -27,27 +27,27 @@ const ShowsState = (props) => {
       payload : data
     });
   }
-  const getSingleShow = async (id) => {
-    dispatch({
-      type: SET_LOADING
-    });
+  // const getSingleShow = async (id) => {
+  //   dispatch({
+  //     type: SET_LOADING
+  //   });
     
-    const { data } = await axios.get(`https://api.tvmaze.com/singleshow/${id}`);
+  //   const { data } = await axios.get(`https://api.tvmaze.com/people/${id}/castcredits?embed=show`);
 
-    // console.log(data);
+  //   console.log(data);
 
-    dispatch({
-      type: SET_SINGLE_SHOW,
-      payload: data,
-    });
-  };
+  //   dispatch({
+  //     type: SET_SINGLE_SHOW,
+  //     payload: data,
+  //   });
+  // };
   return (
     <ShowsContext.Provider value={{
       show :state.shows,
       singleShow :state.singleShow,
       loading :state.loading,
       searchShows,
-      getSingleShow,
+      // getSingleShow
 
     }}>
         {props.children}

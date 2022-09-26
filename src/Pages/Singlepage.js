@@ -1,37 +1,42 @@
-import { useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+// import { useEffect, useContext } from "react";
+// import { useParams } from "react-router-dom";
 
 // Context
-import ShowsContext from "../Context/shows/showsContext";
+// import ShowsContext from "../Context/shows/showsContext";
 
-const Singlepage = ({ match }) => {
+// const Singlepage = () => {
+//   // const params =  useParams()
+//   const { getSingleShow, singleShow=[], loading } = useContext(ShowsContext);
 
-  const { getSingleShow=[], singleShow=[], loading } = useContext(ShowsContext);
-
-  useEffect(() => {
-    getSingleShow(match.params.id);
-  }, []);
+//   useEffect(() => {
+//     getSingleShow(params.id);
+//   } ,[]);
 // 
-  const removeTags = (text) => {
-    if (text === null || text === "") {
-      return false;
-    } else {
-      text = text.toString();
-    }
-    return text.replace(/(<([^>]+)>)/gi, "");
-  };
+  // const removeTags = (text) => {
+  //   if (text === null || text === "") {
+  //     return false;
+  //   } else {
+  //     text = text.toString();
+  //   }
+  //   return text.replace(/(<([^>]+)>)/gi, "");
+  // };
 
-  return (
-    <>
-    <h1>This is single page  </h1>
+  // return (
+  //   <>
+  //   <h1>This is single page  </h1>
+  //   {loading ? (<h2>Loading . . . </h2>) : (
+  //     <div>
+      
+  //     </div>
+  //   )}
       {/* {loading ? (
-        <h1>Loading ...</h1>
+        <h1>Loading ...</h1> 
       ) : (
         <div className="singleshow">
           <img
             src={
-              singleShow.image
-                ? singleShow.image.medium
+              singleShow._embedded.show.image
+                ? singleShow._embedded.show.image
                 : "https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"
             }
             alt={singleShow.name}
@@ -69,8 +74,8 @@ const Singlepage = ({ match }) => {
           </div>
         </div>
       )} */}
-    </>
-  );
-};
+//     </>
+//   );
+// };
 
-export default Singlepage;
+//export default Singlepage;
